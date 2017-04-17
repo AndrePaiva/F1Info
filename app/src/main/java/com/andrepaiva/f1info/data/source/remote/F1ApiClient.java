@@ -9,4 +9,10 @@ public interface F1ApiClient {
 
     @GET("last/results.json")
     Call<ApiResponse> getLastResults();
+
+    @GET("driverStandings.json")
+    Call<ApiResponse> getDriverStandings();
+
+    @GET("next.json")
+    Call<ApiResponse> getNextRace();
 }
