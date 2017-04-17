@@ -7,6 +7,6 @@ import retrofit2.http.GET;
 
 public interface F1ApiClient {
 
-    @GET("/last/results.json")
+    @GET("last/results.json")
     Call<ApiResponse> getLastResults();
 }
