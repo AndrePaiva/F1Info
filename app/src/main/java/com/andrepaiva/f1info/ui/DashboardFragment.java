@@ -36,7 +36,7 @@ public class DashboardFragment extends Fragment {
 
             @Override
             public void onPreExecute() {
-                Log.d(TAG, "On Post Execute Call Succeeded");
+                Log.d(TAG, "On Pre Execute Call Succeeded");
             }
 
             @Override
@@ -51,7 +51,7 @@ public class DashboardFragment extends Fragment {
 
             @Override
             public void onError(Throwable throwable) {
-                Log.e(TAG, "Last Results Call Failed");
+                Log.e(TAG, "Dashboard Call Failed");
             }
         });
         task.execute();

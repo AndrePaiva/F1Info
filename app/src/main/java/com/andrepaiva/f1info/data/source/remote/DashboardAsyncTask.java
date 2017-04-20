@@ -44,7 +44,7 @@ public class DashboardAsyncTask extends AsyncTask<Object, Object, DashboardRespo
             }
         } catch (IOException e) {
             callback.onError(e);
-            Log.e("F1", "Error requesting data", e);
+            Log.e("F1", "Error requesting data" + e.getMessage(), e);
         }
 
         return model;
