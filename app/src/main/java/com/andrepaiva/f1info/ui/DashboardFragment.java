@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.data.model.DashboardResponse;
@@ -27,7 +28,7 @@ public class DashboardFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         getActivity().setTitle("F1 Info");
@@ -45,8 +46,79 @@ public class DashboardFragment extends Fragment {
 
                 Gson gson = new Gson();
                 Log.d(TAG, "Teste 1: " + (gson.toJson(model.getLastResults())));
-                Log.d(TAG, "Teste 2: " + (gson.toJson(model.getDriverStandings())));
-                Log.d(TAG, "Teste 3: " + (gson.toJson(model.getNextRace())));
+                TextView p1Name = (TextView)getView().findViewById(R.id.P1_name);
+                p1Name.setText(model.getLastResults().getMRData().getRaceTable()
+                        .getRaces().get(0).getResults().get(0).getDriver().getFamilyName());
+
+                TextView p1Time = (TextView)getView().findViewById(R.id.P1_time);
+                p1Time.setText(model.getLastResults().getMRData().getRaceTable()
+                        .getRaces().get(0).getResults().get(0).getTime().getTime());
+
+                /*P2*/
+                TextView p2Name = (TextView) getView().findViewById(R.id.P2_name);
+                p2Name.setText(model.getLastResults().getMRData().getRaceTable()
+                        .getRaces().get(0).getResults().get(1).getDriver().getFamilyName());
+
+                TextView p2Time = (TextView)getView().findViewById(R.id.P2_time);
+                p2Time.setText(model.getLastResults().getMRData().getRaceTable()
+                        .getRaces().get(0).getResults().get(1).getTime().getTime());
+
+                /*P3*/
+                TextView p3Name = (TextView) getView().findViewById(R.id.P3_name);
+                p3Name.setText(model.getLastResults().getMRData().getRaceTable()
+                        .getRaces().get(0).getResults().get(2).getDriver().getFamilyName());
+
+                TextView p3Time = (TextView)getView().findViewById(R.id.P3_time);
+                p3Time.setText(model.getLastResults().getMRData().getRaceTable()
+                        .getRaces().get(0).getResults().get(2).getTime().getTime());
+
+
+                /*NEXT GP*/
+                Log.d(TAG, "Teste 2: " + (gson.toJson(model.getNextRace())));
+                TextView nextPlace = (TextView) getView().findViewById(R.id.next_place);
+                nextPlace.setText(model.getNextRace().getMRData().getRaceTable().getRaces().get(0).getRaceName());
+
+                TextView nextCountry = (TextView) getView().findViewById(R.id.next_country);
+                nextCountry.setText(model.getNextRace().getMRData().getRaceTable().getRaces()
+                        .get(0).getCircuit().getLocation().getCountry());
+
+                TextView nextCircuit = (TextView) getView().findViewById(R.id.next_circuit);
+                nextCircuit.setText(model.getNextRace().getMRData().getRaceTable().getRaces()
+                        .get(0).getCircuit().getCircuitName());
+
+                TextView nextSchedule = (TextView) getView().findViewById(R.id.next_schedule);
+                nextSchedule.setText(model.getNextRace().getMRData().getRaceTable().getRaces()
+                        .get(0).getDate());
+
+                /*DASHBOARD DRIVER STANDINGS*/
+                Log.d(TAG, "Teste 3: " + (gson.toJson(model.getDriverStandings())));
+                /*P1*/
+                TextView p1StandingName = (TextView) getView().findViewById(R.id.dashb_std_p1_name);
+                p1StandingName.setText(model.getDriverStandings().getMRData().getStandingsTable()
+                        .getStandingsLists().get(0).getDriverStandings().get(0).getDriver().getFamilyName());
+
+                TextView p1StandingPoints = (TextView) getView().findViewById(R.id.dashb_std_p1_points);
+                p1StandingPoints.setText(model.getDriverStandings().getMRData().getStandingsTable()
+                        .getStandingsLists().get(0).getDriverStandings().get(0).getPoints());
+
+                /*P2*/
+                TextView p2StandingName = (TextView) getView().findViewById(R.id.dashb_std_p2_name);
+                p2StandingName.setText(model.getDriverStandings().getMRData().getStandingsTable()
+                        .getStandingsLists().get(0).getDriverStandings().get(1).getDriver().getFamilyName());
+
+                TextView p2StandingPoints = (TextView) getView().findViewById(R.id.dashb_std_p2_points);
+                p2StandingPoints.setText(model.getDriverStandings().getMRData().getStandingsTable()
+                        .getStandingsLists().get(0).getDriverStandings().get(1).getPoints());
+
+                /*P3*/
+                TextView p3StandingName = (TextView) getView().findViewById(R.id.dashb_std_p3_name);
+                p3StandingName.setText(model.getDriverStandings().getMRData().getStandingsTable()
+                        .getStandingsLists().get(0).getDriverStandings().get(2).getDriver().getFamilyName());
+
+                TextView p3StandingPoints = (TextView) getView().findViewById(R.id.dashb_std_p3_points);
+                p3StandingPoints.setText(model.getDriverStandings().getMRData().getStandingsTable()
+                        .getStandingsLists().get(0).getDriverStandings().get(2).getPoints());
+
             }
 
             @Override
