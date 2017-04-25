@@ -1,175 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/australia_card_view"
-                android:layout_width="fill_parent"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                card_view:cardCornerRadius="2dp"
-                card_view:contentPadding="10dp">
-
-                <RelativeLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent">
-
-                    <TextView
-                        android:id="@+id/australia_textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:text="Australia"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/australia_textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/australia_textView"
-                        android:layout_marginTop="10dp"
-                        android:text="Teste" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/china_card_view"
-                android:layout_width="fill_parent"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                card_view:cardCornerRadius="2dp"
-                card_view:contentPadding="10dp">
-
-                <RelativeLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent">
-
-                    <TextView
-                        android:id="@+id/china_textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:text="China"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/china_textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/china_textView"
-                        android:layout_marginTop="10dp"
-                        android:text="Teste" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/bahrein_card_view"
-                android:layout_width="fill_parent"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                card_view:cardCornerRadius="2dp"
-                card_view:contentPadding="10dp">
-
-                <RelativeLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent">
-
-                    <TextView
-                        android:id="@+id/bahrein_textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:text="Bahrein"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/bahrein_textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/bahrein_textView"
-                        android:layout_marginTop="10dp"
-                        android:text="Teste" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/russia_card_view"
-                android:layout_width="fill_parent"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                card_view:cardCornerRadius="2dp"
-                card_view:contentPadding="10dp">
-
-                <RelativeLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent">
-
-                    <TextView
-                        android:id="@+id/russia_textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:text="Russia"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/russia_textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/russia_textView"
-                        android:layout_marginTop="10dp"
-                        android:text="Teste" />
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-
-        </LinearLayout>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/brazil_card_view"
+            android:id="@+id/australia_card_view"
             android:layout_width="fill_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
             card_view:cardCornerRadius="2dp"
@@ -180,20 +24,452 @@
                 android:layout_height="fill_parent">
 
                 <TextView
-                    android:id="@+id/brazil_textView"
+                    android:id="@+id/australia_gp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:text="Brazil"
+                    android:text="Australian Grand Prix"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/brazil_textView2"
+                    android:id="@+id/australia_circuit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/brazil_textView"
-                    android:text="Teste"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_below="@+id/australia_gp"
+                    android:layout_marginTop="10dp"
+                    android:text="Albert Park Grand Prix Circuit" />
+
+                <TextView
+                    android:id="@+id/australia_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/australia_circuit"
+                    android:layout_marginTop="10dp"
+                    android:text="Sun, 26 March 2017" />
+
+                <ImageView
+                    android:id="@+id/australia_flag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/australia_gp"
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/australia"
+                    android:scaleType="fitXY" />
+
+                <!--<TextView-->
+                    <!--android:id="@+id/australia_country"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/australia_circuit"-->
+                    <!--android:layout_toRightOf="@id/australia_gp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:text="AUSTRALIA" />-->
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/china_card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/china_gp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Chinese Grand Prix"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/china_circuit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/china_gp"
+                    android:layout_marginTop="10dp"
+                    android:text="Shanghai International Circuit" />
+
+                <TextView
+                    android:id="@+id/china_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/china_circuit"
+                    android:layout_marginTop="10dp"
+                    android:text="Sun, 9 April 2017" />
+
+                <ImageView
+                    android:id="@+id/china_flag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/china_gp"
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/china"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/bahrein_card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/bahrain_gp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Bahrain  Grand Prix"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bahrain_circuit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bahrain_gp"
+                    android:layout_marginTop="10dp"
+                    android:text="Bahrain International Circuit" />
+
+                <TextView
+                    android:id="@+id/bahrain_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bahrain_circuit"
+                    android:layout_marginTop="10dp"
+                    android:text="Sun, 16 April 2017" />
+
+                <ImageView
+                    android:id="@+id/bahrain_flag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/bahrain_gp"
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/bahrain"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/russia_card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/russia_gp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Russian  Grand Prix"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/russia_circuit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/russia_gp"
+                    android:layout_marginTop="10dp"
+                    android:text="Sochi International Street Circuit" />
+
+                <TextView
+                    android:id="@+id/russia_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/russia_circuit"
+                    android:layout_marginTop="10dp"
+                    android:text="Sun, 30 April 2017" />
+
+                <ImageView
+                    android:id="@+id/russia_flag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/russia_gp"
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/russia"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/spain_card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/spain_gp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Spanish Grand Prix"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/spain_circuit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spain_gp"
+                    android:layout_marginTop="10dp"
+                    android:text="Circuit de Catalunya" />
+
+                <TextView
+                    android:id="@+id/spain_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spain_circuit"
+                    android:layout_marginTop="10dp"
+                    android:text="Sun, 14 May 2017" />
+
+                <ImageView
+                    android:id="@+id/spain_flag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/spain_gp"
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/spain"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/monaco_card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/monaco_gp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Monaco Grand Prix"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/monaco_circuit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/monaco_gp"
+                    android:layout_marginTop="10dp"
+                    android:text="Circuit de Monaco" />
+
+                <TextView
+                    android:id="@+id/monaco_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/monaco_circuit"
+                    android:layout_marginTop="10dp"
+                    android:text="Sun, 28 May 2017" />
+
+                <ImageView
+                    android:id="@+id/monaco_flag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/monaco_gp"
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/monaco"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/canada_card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/canada_gp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Canadian Grand Prix"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/canada_circuit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/canada_gp"
+                    android:layout_marginTop="10dp"
+                    android:text="Circuit Gilles Villeneuve" />
+
+                <TextView
+                    android:id="@+id/canada_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/canada_circuit"
+                    android:layout_marginTop="10dp"
+                    android:text="Sun, 11 June 2017" />
+
+                <ImageView
+                    android:id="@+id/canada_flag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/canada_gp"
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/canada"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/azerbaijan_card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/azerbaijan_gp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Azerbaijan Grand Prix"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/azerbaijan_circuit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/azerbaijan_gp"
+                    android:layout_marginTop="10dp"
+                    android:text="Baku City Circuit" />
+
+                <TextView
+                    android:id="@+id/azerbaijan_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/azerbaijan_circuit"
+                    android:layout_marginTop="10dp"
+                    android:text="Sun, 25 June 2017" />
+
+                <ImageView
+                    android:id="@+id/azerbaijan_flag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/azerbaijan_gp"
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/azerbaijan"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/austria_card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="2dp"
+            card_view:contentPadding="10dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/austria_gp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="Austrian Grand Prix"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/austria_circuit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/austria_gp"
+                    android:layout_marginTop="10dp"
+                    android:text="Red Bull Ring" />
+
+                <TextView
+                    android:id="@+id/austria_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/austria_circuit"
+                    android:layout_marginTop="10dp"
+                    android:text="Sun, 09 July 2017" />
+
+                <ImageView
+                    android:id="@+id/austria_flag"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/austria_gp"
+                    android:layout_marginLeft="140dp"
+                    android:src="@drawable/austria"
+                    android:scaleType="fitXY" />
+
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 

@@ -8,11 +8,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.data.model.DashboardResponse;
 import com.andrepaiva.f1info.data.source.remote.DashboardAsyncTask;
+import com.andrepaiva.f1info.utils.DateUtils;
 import com.google.gson.Gson;
 
 public class DashboardFragment extends Fragment {
@@ -72,7 +74,6 @@ public class DashboardFragment extends Fragment {
                 p3Time.setText(model.getLastResults().getMRData().getRaceTable()
                         .getRaces().get(0).getResults().get(2).getTime().getTime());
 
-
                 /*NEXT GP*/
                 Log.d(TAG, "Teste 2: " + (gson.toJson(model.getNextRace())));
                 TextView nextPlace = (TextView) getView().findViewById(R.id.next_place);
@@ -82,13 +83,18 @@ public class DashboardFragment extends Fragment {
                 nextCountry.setText(model.getNextRace().getMRData().getRaceTable().getRaces()
                         .get(0).getCircuit().getLocation().getCountry());
 
+                ImageView countryFlag = (ImageView) getView().findViewById(R.id.next_country_flag);
+                String country = model.getNextRace().getMRData().getRaceTable().getRaces()
+                        .get(0).getCircuit().getLocation().getCountry();
+                countryFlag.setImageResource(getFlagResource(country));
+
                 TextView nextCircuit = (TextView) getView().findViewById(R.id.next_circuit);
                 nextCircuit.setText(model.getNextRace().getMRData().getRaceTable().getRaces()
                         .get(0).getCircuit().getCircuitName());
 
                 TextView nextSchedule = (TextView) getView().findViewById(R.id.next_schedule);
-                nextSchedule.setText(model.getNextRace().getMRData().getRaceTable().getRaces()
-                        .get(0).getDate());
+                String raceDate = model.getNextRace().getMRData().getRaceTable().getRaces().get(0).getDate();
+                nextSchedule.setText(DateUtils.adjustDate(raceDate));
 
                 /*DASHBOARD DRIVER STANDINGS*/
                 Log.d(TAG, "Teste 3: " + (gson.toJson(model.getDriverStandings())));
@@ -127,6 +133,15 @@ public class DashboardFragment extends Fragment {
             }
         });
         task.execute();
+    }
+
+    private int getFlagResource(String country) {
+        int id = 0;
+        switch (country){
+            case "Russia":
+                id = R.drawable.russia;
+        }
+        return id;
     }
 
     @Override
