@@ -14,6 +14,7 @@ import android.view.MenuItem;
 
 import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.ui.fragment.CalendarFragment;
+import com.andrepaiva.f1info.ui.fragment.ConstructorStandingFragment;
 import com.andrepaiva.f1info.ui.fragment.DriverStandingFragment;
 import com.andrepaiva.f1info.ui.fragment.DashboardFragment;
 import com.andrepaiva.f1info.ui.fragment.DriversFragment;
@@ -115,6 +116,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_driver_standing:
                 fragment = new DriverStandingFragment();
+                break;
+            case R.id.nav_constructor_standing:
+                fragment = new ConstructorStandingFragment();
                 break;
         }
 

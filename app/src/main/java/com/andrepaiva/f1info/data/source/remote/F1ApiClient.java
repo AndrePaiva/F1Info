@@ -15,4 +15,7 @@ public interface F1ApiClient {
 
     @GET("next.json")
     Call<ApiResponse> getNextRace();
+
+    @GET("constructorStandings.json")
+    Call<ApiResponse> getConstructorStandings();
 }

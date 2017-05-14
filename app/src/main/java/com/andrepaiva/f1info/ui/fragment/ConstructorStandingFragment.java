@@ -11,32 +11,32 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.andrepaiva.f1info.R;
-import com.andrepaiva.f1info.data.model.ApiEntities.DriverStanding;
-import com.andrepaiva.f1info.data.source.remote.DriverStandingAsyncTask;
-import com.andrepaiva.f1info.ui.adapter.DriverStandingAdapter;
+import com.andrepaiva.f1info.data.model.ApiEntities.ConstructorStanding;
+import com.andrepaiva.f1info.data.source.remote.ConstructorStandingAsyncTask;
+import com.andrepaiva.f1info.ui.adapter.ConstructorStandingAdapter;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
 import java.util.List;
 
-public class DriverStandingFragment extends Fragment{
+public class ConstructorStandingFragment extends Fragment{
 
-    private static final String TAG = DriverStandingFragment.class.getSimpleName();
+    private static final String TAG = ConstructorStandingFragment.class.getSimpleName();
     private SuperRecyclerView superRecyclerView;
 
-    private DriverStandingAsyncTask task;
+    private ConstructorStandingAsyncTask task;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.driver_standings, container, false);
+        return inflater.inflate(R.layout.constructor_standings, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Driver Standing");
+        getActivity().setTitle("Constructor Standing");
 
-        task = new DriverStandingAsyncTask(new DriverStandingAsyncTask.Callback(){
+        task = new ConstructorStandingAsyncTask(new ConstructorStandingAsyncTask.Callback(){
 
             @Override
             public void onPreExecute() {
@@ -44,12 +44,12 @@ public class DriverStandingFragment extends Fragment{
             }
 
             @Override
-            public void onPostExecute(List<DriverStanding> driverStandings) {
+            public void onPostExecute(List<ConstructorStanding> constructorStandings) {
                 Log.d(TAG, "On Post Execute Call Succeeded");
-                DriverStandingAdapter driverStandingAdapter = new DriverStandingAdapter(driverStandings, null);
+                ConstructorStandingAdapter constructorStandingAdapter = new ConstructorStandingAdapter(constructorStandings, null);
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-                superRecyclerView = (SuperRecyclerView) getView().findViewById(R.id.driver_standings_view);
-                superRecyclerView.setAdapter(driverStandingAdapter);
+                superRecyclerView = (SuperRecyclerView) getView().findViewById(R.id.constructor_standings_view);
+                superRecyclerView.setAdapter(constructorStandingAdapter);
                 superRecyclerView.setLayoutManager(linearLayoutManager);
             }
 
