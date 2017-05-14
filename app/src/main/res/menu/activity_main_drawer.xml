@@ -23,9 +23,9 @@
             android:icon="@drawable/ic_menu_navigate_next"
             android:title="Next GP" />
         <item
-            android:id="@+id/nav_championship"
+            android:id="@+id/nav_driver_standing"
             android:icon="@drawable/ic_menu_championship"
-            android:title="Championship" />
+            android:title="Driver Standing" />
     </group>
 
     <item android:title="More">

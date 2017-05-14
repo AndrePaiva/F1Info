@@ -1,4 +1,4 @@
-package com.andrepaiva.f1info.ui;
+package com.andrepaiva.f1info.ui.fragment;
 
 import android.os.AsyncTask;
 import android.os.Bundle;

@@ -1,11 +1,8 @@
-package com.andrepaiva.f1info.ui;
+package com.andrepaiva.f1info.ui.activity;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,6 +13,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.andrepaiva.f1info.R;
+import com.andrepaiva.f1info.ui.fragment.CalendarFragment;
+import com.andrepaiva.f1info.ui.fragment.DriverStandingFragment;
+import com.andrepaiva.f1info.ui.fragment.DashboardFragment;
+import com.andrepaiva.f1info.ui.fragment.DriversFragment;
+import com.andrepaiva.f1info.ui.fragment.NextGPFragment;
+import com.andrepaiva.f1info.ui.fragment.TeamsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -111,7 +114,7 @@ public class MainActivity extends AppCompatActivity
                 fragment = new NextGPFragment();
                 break;
             case R.id.nav_championship:
-                fragment = new ChampionshipFragment();
+                fragment = new DriverStandingFragment();
                 break;
         }
 

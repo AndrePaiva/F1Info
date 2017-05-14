@@ -7,14 +7,16 @@ import com.google.gson.annotations.SerializedName;
 public class StandingsList {
 
     @SerializedName("season")
-    @Expose
     private String season;
+
     @SerializedName("round")
-    @Expose
     private String round;
+
     @SerializedName("DriverStandings")
-    @Expose
-    private List<DriverStanding> driverStandings = null;
+    private List<DriverStanding> driverStandings;
+
+    @SerializedName("ConstructorStandings")
+    private List<ConstructorStanding> constructorStandings;
 
     /**
      * No args constructor for use in serialization
@@ -26,12 +28,14 @@ public class StandingsList {
      * @param season
      * @param driverStandings
      * @param round
+     * @param constructorStandings
      */
-    public StandingsList(String season, String round, List<DriverStanding> driverStandings) {
+    public StandingsList(String season, String round, List<DriverStanding> driverStandings, List<ConstructorStanding> constructorStandings) {
         super();
         this.season = season;
         this.round = round;
         this.driverStandings = driverStandings;
+        this.constructorStandings = constructorStandings;
     }
 
     public String getSeason() {
@@ -56,5 +60,13 @@ public class StandingsList {
 
     public void setDriverStandings(List<DriverStanding> driverStandings) {
         this.driverStandings = driverStandings;
+    }
+
+    public List<ConstructorStanding> getConstructorStandings() {
+        return constructorStandings;
+    }
+
+    public void setConstructorStandings(List<ConstructorStanding> constructorStandings) {
+        this.constructorStandings = constructorStandings;
     }
 }

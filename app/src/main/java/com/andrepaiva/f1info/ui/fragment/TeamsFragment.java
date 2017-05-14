@@ -1,4 +1,4 @@
-package com.andrepaiva.f1info.ui;
+package com.andrepaiva.f1info.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,17 +9,17 @@ import android.view.ViewGroup;
 
 import com.andrepaiva.f1info.R;
 
-public class NextGPFragment extends Fragment{
+public class TeamsFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.next_gp, container, false);
+        return inflater.inflate(R.layout.teams, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getActivity().setTitle("Next GP");
+        getActivity().setTitle("Teams");
     }
 }
