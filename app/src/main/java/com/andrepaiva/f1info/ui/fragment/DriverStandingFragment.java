@@ -21,6 +21,7 @@ import static android.content.ContentValues.TAG;
 
 public class DriverStandingFragment extends Fragment{
 
+    private static final String TAG = DriverStandingFragment.class.getSimpleName();
     private SuperRecyclerView superRecyclerView;
 
     private DriverStandingAsyncTask task;
