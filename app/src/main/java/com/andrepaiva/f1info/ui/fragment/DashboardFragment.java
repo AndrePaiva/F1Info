@@ -138,8 +138,67 @@ public class DashboardFragment extends Fragment {
     private int getFlagResource(String country) {
         int id = 0;
         switch (country){
+            case "Australia":
+                id = R.drawable.australia;
+                break;
+            case "China":
+                id = R.drawable.china;
+                break;
+            case "Bahrain":
+                id = R.drawable.bahrain;
+                break;
             case "Russia":
                 id = R.drawable.russia;
+                break;
+            case "Spain":
+                id = R.drawable.spain;
+                break;
+            case "Monaco":
+                id = R.drawable.monaco;
+                break;
+            case "Canada":
+                id = R.drawable.canada;
+                break;
+            case "Azerbaijan":
+                id = R.drawable.azerbaijan;
+                break;
+            case "Austria":
+                id = R.drawable.austria;
+                break;
+            case "UK":
+                id = R.drawable.uk;
+                break;
+            case "Hungary":
+                id = R.drawable.hungary;
+                break;
+            case "Belgium":
+                id = R.drawable.belgium;
+                break;
+            case "Italy":
+                id = R.drawable.italy;
+                break;
+            case "Singapore":
+                id = R.drawable.singapore;
+                break;
+            case "Malaysia":
+                id = R.drawable.malaysia;
+                break;
+            case "Japan":
+                id = R.drawable.japan;
+                break;
+            case "USA":
+                id = R.drawable.usa;
+                break;
+            case "Mexico":
+                id = R.drawable.mexico;
+                break;
+            case "Brazil":
+                id = R.drawable.brazil;
+                break;
+            case "UAE":
+                id = R.drawable.uae;
+                break;
+
         }
         return id;
     }

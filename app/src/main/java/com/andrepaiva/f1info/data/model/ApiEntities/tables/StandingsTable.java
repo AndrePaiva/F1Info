@@ -13,7 +13,7 @@ public class StandingsTable {
     private String season;
     @SerializedName("StandingsLists")
     @Expose
-    private List<StandingsList> standingsLists = null;
+    private List<StandingsList> standingsLists;
 
     /**
      * No args constructor for use in serialization

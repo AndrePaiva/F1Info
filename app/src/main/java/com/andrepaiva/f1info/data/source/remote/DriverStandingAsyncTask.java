@@ -4,13 +4,16 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.andrepaiva.f1info.data.model.ApiEntities.ApiResponse;
+import com.andrepaiva.f1info.data.model.ApiEntities.DriverStanding;
 import com.andrepaiva.f1info.data.model.DashboardResponse;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Response;
 
-public class DriverStandingAsyncTask extends AsyncTask<Object, Object, DashboardResponse> {
+public class DriverStandingAsyncTask extends AsyncTask<Object, Object, List<DriverStanding>> {
 
     private final Callback callback;
 
@@ -24,13 +27,14 @@ public class DriverStandingAsyncTask extends AsyncTask<Object, Object, Dashboard
     }
 
     @Override
-    protected DashboardResponse doInBackground(Object... params) {
-        DashboardResponse model = new DashboardResponse();
+    protected List<DriverStanding> doInBackground(Object... params) {
+        List<DriverStanding> model = new ArrayList<>();
 
         try {
             Response<ApiResponse> driverStandingResponse = APIHelper.instance().getF1ApiClient().getDriverStandings().execute();
             if (driverStandingResponse.isSuccessful()) {
-                model.setLastResults(driverStandingResponse.body());
+                return driverStandingResponse.body().getMRData().getStandingsTable().getStandingsLists()
+                        .get(0).getDriverStandings();
             }
         } catch (IOException e) {
             callback.onError(e);
@@ -41,7 +45,7 @@ public class DriverStandingAsyncTask extends AsyncTask<Object, Object, Dashboard
     }
 
     @Override
-    protected void onPostExecute(DashboardResponse model) {
+    protected void onPostExecute(List<DriverStanding> model) {
         callback.onPostExecute(model);
     }
 
@@ -49,7 +53,7 @@ public class DriverStandingAsyncTask extends AsyncTask<Object, Object, Dashboard
 
         void onPreExecute();
 
-        void onPostExecute(DashboardResponse model);
+        void onPostExecute(List<DriverStanding> model);
 
         void onError(Throwable throwable);
     }

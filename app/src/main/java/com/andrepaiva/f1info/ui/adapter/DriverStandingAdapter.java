@@ -1,6 +1,7 @@
 package com.andrepaiva.f1info.ui.adapter;
 
 import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.data.model.ApiEntities.DriverStanding;
+import com.andrepaiva.f1info.ui.listeners.OnDriverStandingItemClick;
 
 import java.util.List;
 
@@ -20,8 +22,11 @@ import java.util.List;
 
 public class DriverStandingAdapter extends BaseAdapter<DriverStandingAdapter.DsViewHolder, DriverStanding> {
 
-    public DriverStandingAdapter(List<DriverStanding> items) {
+    private OnDriverStandingItemClick onDriverStandingItemClick;
+
+    public DriverStandingAdapter(List<DriverStanding> items, OnDriverStandingItemClick onDriverStandingItemClick) {
         super(items);
+        this.onDriverStandingItemClick = onDriverStandingItemClick;
     }
 
     @Override
@@ -35,15 +40,24 @@ public class DriverStandingAdapter extends BaseAdapter<DriverStandingAdapter.DsV
     @Override
     public void onBindViewHolder(DsViewHolder holder, int position) {
         final DriverStanding driverStanding = items.get(position);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (onDriverStandingItemClick != null){
+                    onDriverStandingItemClick.onDriverStandingClick(driverStanding);
+                }
+            }
+        });
         holder.driverStdName.setText(driverStanding.getDriver().getFamilyName());
-        holder.driverStdNPoints.setText(driverStanding.getPoints());
+        holder.driverStdNPoints.setText(driverStanding.getPoints() + " points");
         holder.driverStdPosition.setText(driverStanding.getPosition());
         holder.driverStdConst.setText(driverStanding.getConstructors().get(0).getName());
     }
 
     static class DsViewHolder extends RecyclerView.ViewHolder {
 
-        private RelativeLayout driverStandingsCard;
+        private CardView driverStandingsCard;
         private TextView driverStdName;
         private final TextView driverStdPosition;
         private final TextView driverStdNPoints;
@@ -51,7 +65,7 @@ public class DriverStandingAdapter extends BaseAdapter<DriverStandingAdapter.DsV
 
         DsViewHolder(View itemView) {
             super(itemView);
-            driverStandingsCard = (RelativeLayout) itemView.findViewById(R.id.driver_standings_card);
+            driverStandingsCard = (CardView) itemView.findViewById(R.id.driver_standings_card);
             driverStdName = (TextView) driverStandingsCard.findViewById(R.id.driver_std_name);
             driverStdPosition = (TextView) driverStandingsCard.findViewById(R.id.driver_std_position);
             driverStdNPoints = (TextView) driverStandingsCard.findViewById(R.id.driver_std_points);

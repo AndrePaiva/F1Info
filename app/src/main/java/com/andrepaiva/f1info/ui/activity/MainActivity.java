@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_next_gp:
                 fragment = new NextGPFragment();
                 break;
-            case R.id.nav_championship:
+            case R.id.nav_driver_standing:
                 fragment = new DriverStandingFragment();
                 break;
         }
