@@ -139,64 +139,64 @@ public class DashboardFragment extends Fragment {
         int id = 0;
         switch (country){
             case "Australia":
-                id = R.drawable.australia;
+                id = R.mipmap.australia;
                 break;
             case "China":
-                id = R.drawable.china;
+                id = R.mipmap.china;
                 break;
             case "Bahrain":
-                id = R.drawable.bahrain;
+                id = R.mipmap.bahrain;
                 break;
             case "Russia":
-                id = R.drawable.russia;
+                id = R.mipmap.russia;
                 break;
             case "Spain":
-                id = R.drawable.spain;
+                id = R.mipmap.spain;
                 break;
             case "Monaco":
-                id = R.drawable.monaco;
+                id = R.mipmap.monaco;
                 break;
             case "Canada":
-                id = R.drawable.canada;
+                id = R.mipmap.canada;
                 break;
             case "Azerbaijan":
-                id = R.drawable.azerbaijan;
+                id = R.mipmap.azerbaijan;
                 break;
             case "Austria":
-                id = R.drawable.austria;
+                id = R.mipmap.austria;
                 break;
             case "UK":
-                id = R.drawable.uk;
+                id = R.mipmap.uk;
                 break;
             case "Hungary":
-                id = R.drawable.hungary;
+                id = R.mipmap.hungary;
                 break;
             case "Belgium":
-                id = R.drawable.belgium;
+                id = R.mipmap.belgium;
                 break;
             case "Italy":
-                id = R.drawable.italy;
+                id = R.mipmap.italy;
                 break;
             case "Singapore":
-                id = R.drawable.singapore;
+                id = R.mipmap.singapore;
                 break;
             case "Malaysia":
-                id = R.drawable.malaysia;
+                id = R.mipmap.malaysia;
                 break;
             case "Japan":
-                id = R.drawable.japan;
+                id = R.mipmap.japan;
                 break;
             case "USA":
-                id = R.drawable.usa;
+                id = R.mipmap.usa;
                 break;
             case "Mexico":
-                id = R.drawable.mexico;
+                id = R.mipmap.mexico;
                 break;
             case "Brazil":
-                id = R.drawable.brazil;
+                id = R.mipmap.brazil;
                 break;
             case "UAE":
-                id = R.drawable.uae;
+                id = R.mipmap.uae;
                 break;
 
         }

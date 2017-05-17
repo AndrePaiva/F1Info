@@ -16,7 +16,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            card_view:cardCornerRadius="2dp"
+            card_view:cardCornerRadius="8dp"
             card_view:contentPadding="10dp">
 
             <RelativeLayout
@@ -54,7 +54,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/australia_gp"
                     android:layout_marginLeft="140dp"
-                    android:src="@drawable/australia"
+                    android:src="@mipmap/australia"
                     android:scaleType="fitXY" />
 
                 <!--<TextView-->
@@ -76,7 +76,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            card_view:cardCornerRadius="2dp"
+            card_view:cardCornerRadius="8dp"
             card_view:contentPadding="10dp">
 
             <RelativeLayout
@@ -114,7 +114,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/china_gp"
                     android:layout_marginLeft="140dp"
-                    android:src="@drawable/china"
+                    android:src="@mipmap/china"
                     android:scaleType="fitXY" />
 
             </RelativeLayout>
@@ -127,7 +127,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            card_view:cardCornerRadius="2dp"
+            card_view:cardCornerRadius="8dp"
             card_view:contentPadding="10dp">
 
             <RelativeLayout
@@ -165,7 +165,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/bahrain_gp"
                     android:layout_marginLeft="140dp"
-                    android:src="@drawable/bahrain"
+                    android:src="@mipmap/bahrain"
                     android:scaleType="fitXY" />
 
             </RelativeLayout>
@@ -178,7 +178,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            card_view:cardCornerRadius="2dp"
+            card_view:cardCornerRadius="8dp"
             card_view:contentPadding="10dp">
 
             <RelativeLayout
@@ -216,7 +216,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/russia_gp"
                     android:layout_marginLeft="140dp"
-                    android:src="@drawable/russia"
+                    android:src="@mipmap/russia"
                     android:scaleType="fitXY" />
 
             </RelativeLayout>
@@ -229,7 +229,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            card_view:cardCornerRadius="2dp"
+            card_view:cardCornerRadius="8dp"
             card_view:contentPadding="10dp">
 
             <RelativeLayout
@@ -267,7 +267,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/spain_gp"
                     android:layout_marginLeft="140dp"
-                    android:src="@drawable/spain"
+                    android:src="@mipmap/spain"
                     android:scaleType="fitXY" />
 
             </RelativeLayout>
@@ -279,7 +279,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            card_view:cardCornerRadius="2dp"
+            card_view:cardCornerRadius="8dp"
             card_view:contentPadding="10dp">
 
             <RelativeLayout
@@ -317,7 +317,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/monaco_gp"
                     android:layout_marginLeft="140dp"
-                    android:src="@drawable/monaco"
+                    android:src="@mipmap/monaco"
                     android:scaleType="fitXY" />
 
             </RelativeLayout>
@@ -329,7 +329,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            card_view:cardCornerRadius="2dp"
+            card_view:cardCornerRadius="8dp"
             card_view:contentPadding="10dp">
 
             <RelativeLayout
@@ -367,7 +367,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/canada_gp"
                     android:layout_marginLeft="140dp"
-                    android:src="@drawable/canada"
+                    android:src="@mipmap/canada"
                     android:scaleType="fitXY" />
 
             </RelativeLayout>
@@ -379,7 +379,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            card_view:cardCornerRadius="2dp"
+            card_view:cardCornerRadius="8dp"
             card_view:contentPadding="10dp">
 
             <RelativeLayout
@@ -417,7 +417,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/azerbaijan_gp"
                     android:layout_marginLeft="140dp"
-                    android:src="@drawable/azerbaijan"
+                    android:src="@mipmap/azerbaijan"
                     android:scaleType="fitXY" />
 
             </RelativeLayout>
@@ -429,7 +429,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            card_view:cardCornerRadius="2dp"
+            card_view:cardCornerRadius="8dp"
             card_view:contentPadding="10dp">
 
             <RelativeLayout
@@ -467,7 +467,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/austria_gp"
                     android:layout_marginLeft="140dp"
-                    android:src="@drawable/austria"
+                    android:src="@mipmap/austria"
                     android:scaleType="fitXY" />
 
             </RelativeLayout>
