@@ -1,37 +1,38 @@
 package com.andrepaiva.f1info.data.model.ApiEntities;
 
+import com.andrepaiva.f1info.data.model.ApiEntities.tables.DriverTable;
 import com.andrepaiva.f1info.data.model.ApiEntities.tables.RaceTable;
 import com.andrepaiva.f1info.data.model.ApiEntities.tables.StandingsTable;
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class MRData {
 
     @SerializedName("xmlns")
-    @Expose
     private String xmlns;
+
     @SerializedName("series")
-    @Expose
     private String series;
+
     @SerializedName("url")
-    @Expose
     private String url;
+
     @SerializedName("limit")
-    @Expose
     private String limit;
+
     @SerializedName("offset")
-    @Expose
     private String offset;
+
     @SerializedName("total")
-    @Expose
     private String total;
+
     @SerializedName("StandingsTable")
-    @Expose
     private StandingsTable standingsTable;
 
     @SerializedName("RaceTable")
-    @Expose
     private RaceTable raceTable;
+
+    @SerializedName("DriverTable")
+    private DriverTable driverTable;
 
     /**
      * No args constructor for use in serialization
@@ -123,4 +124,11 @@ public class MRData {
         this.raceTable = raceTable;
     }
 
+    public DriverTable getDriverTable() {
+        return driverTable;
+    }
+
+    public void setDriverTable(DriverTable driverTable) {
+        this.driverTable = driverTable;
+    }
 }

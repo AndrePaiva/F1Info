@@ -21,4 +21,7 @@ public interface F1ApiClient {
 
     @GET("last/qualifying.json")
     Call<ApiResponse> getQualifying();
+
+    @GET("drivers.json")
+    Call<ApiResponse> getDriverList();
 }

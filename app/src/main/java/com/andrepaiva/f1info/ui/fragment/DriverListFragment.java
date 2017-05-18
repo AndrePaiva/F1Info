@@ -11,32 +11,31 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.andrepaiva.f1info.R;
-import com.andrepaiva.f1info.data.model.ApiEntities.QualifyingResult;
-import com.andrepaiva.f1info.data.source.remote.QualifyingAsyncTask;
-import com.andrepaiva.f1info.ui.adapter.QualifyingAdapter;
+import com.andrepaiva.f1info.data.model.ApiEntities.Driver;
+import com.andrepaiva.f1info.data.source.remote.DriverListAsyncTask;
+import com.andrepaiva.f1info.ui.adapter.DriverListAdapter;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
 import java.util.List;
 
-public class QualifyingFragment extends Fragment{
-
-    private static final String TAG = QualifyingFragment.class.getSimpleName();
+public class DriverListFragment extends Fragment{
+    private static final String TAG = DriverListFragment.class.getSimpleName();
     private SuperRecyclerView superRecyclerView;
 
-    private QualifyingAsyncTask task;
+    private DriverListAsyncTask task;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.qualifying, container, false);
+        return inflater.inflate(R.layout.driver_list, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Qualifying");
+        getActivity().setTitle("Drivers");
 
-        task = new QualifyingAsyncTask(new QualifyingAsyncTask.Callback(){
+        task = new DriverListAsyncTask(new DriverListAsyncTask.Callback(){
 
             @Override
             public void onPreExecute() {
@@ -44,18 +43,18 @@ public class QualifyingFragment extends Fragment{
             }
 
             @Override
-            public void onPostExecute(List<QualifyingResult> qualifyingResults) {
+            public void onPostExecute(List<Driver> driverList) {
                 Log.d(TAG, "On Post Execute Call Succeeded");
-                QualifyingAdapter qualifyingAdapter = new QualifyingAdapter(qualifyingResults, null);
+                DriverListAdapter driverListAdapter = new DriverListAdapter(driverList, null);
                 LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-                superRecyclerView = (SuperRecyclerView) getView().findViewById(R.id.qualifying_view);
-                superRecyclerView.setAdapter(qualifyingAdapter);
+                superRecyclerView = (SuperRecyclerView) getView().findViewById(R.id.driver_list_view);
+                superRecyclerView.setAdapter(driverListAdapter);
                 superRecyclerView.setLayoutManager(linearLayoutManager);
             }
 
             @Override
             public void onError(Throwable throwable) {
-                Log.e(TAG, "Qualifying Call Failed");
+                Log.e(TAG, "Driver List Call Failed");
             }
         });
         task.execute();

@@ -1,9 +1,9 @@
 package com.andrepaiva.f1info.ui.activity;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,9 +15,9 @@ import android.view.MenuItem;
 import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.ui.fragment.CalendarFragment;
 import com.andrepaiva.f1info.ui.fragment.ConstructorStandingFragment;
-import com.andrepaiva.f1info.ui.fragment.DriverStandingFragment;
 import com.andrepaiva.f1info.ui.fragment.DashboardFragment;
-import com.andrepaiva.f1info.ui.fragment.DriversFragment;
+import com.andrepaiva.f1info.ui.fragment.DriverListFragment;
+import com.andrepaiva.f1info.ui.fragment.DriverStandingFragment;
 import com.andrepaiva.f1info.ui.fragment.QualifyingFragment;
 import com.andrepaiva.f1info.ui.fragment.TeamsFragment;
 
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity
                 fragment = new CalendarFragment();
                 break;
             case R.id.nav_drivers:
-                fragment = new DriversFragment();
+                fragment = new DriverListFragment();
                 break;
             case R.id.nav_teams:
                 fragment = new TeamsFragment();
