@@ -18,7 +18,7 @@ import com.andrepaiva.f1info.ui.fragment.ConstructorStandingFragment;
 import com.andrepaiva.f1info.ui.fragment.DriverStandingFragment;
 import com.andrepaiva.f1info.ui.fragment.DashboardFragment;
 import com.andrepaiva.f1info.ui.fragment.DriversFragment;
-import com.andrepaiva.f1info.ui.fragment.NextGPFragment;
+import com.andrepaiva.f1info.ui.fragment.QualifyingFragment;
 import com.andrepaiva.f1info.ui.fragment.TeamsFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -111,8 +111,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_teams:
                 fragment = new TeamsFragment();
                 break;
-            case R.id.nav_next_gp:
-                fragment = new NextGPFragment();
+            case R.id.nav_qualifying:
+                fragment = new QualifyingFragment();
                 break;
             case R.id.nav_driver_standing:
                 fragment = new DriverStandingFragment();

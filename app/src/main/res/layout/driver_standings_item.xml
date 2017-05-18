@@ -46,5 +46,12 @@
             android:layout_marginLeft="@dimen/fab_margin"
             android:layout_toRightOf="@id/driver_std_points" />
 
+        <ImageView
+            android:id="@+id/driver_std_flag"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY" />
+
     </RelativeLayout>
 </android.support.v7.widget.CardView>

@@ -19,9 +19,9 @@
             android:icon="@drawable/ic_menu_group"
             android:title="Teams" />
         <item
-            android:id="@+id/nav_next_gp"
-            android:icon="@drawable/ic_menu_navigate_next"
-            android:title="Next GP" />
+            android:id="@+id/nav_qualifying"
+            android:icon="@drawable/ic_timer"
+            android:title="Qualifying" />
         <item
             android:id="@+id/nav_driver_standing"
             android:icon="@drawable/ic_menu_championship"

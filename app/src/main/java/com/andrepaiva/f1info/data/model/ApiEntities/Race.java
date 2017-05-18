@@ -11,29 +11,31 @@ import com.google.gson.annotations.SerializedName;
 public class Race {
 
     @SerializedName("season")
-    @Expose
     private String season;
+
     @SerializedName("round")
-    @Expose
     private String round;
+
     @SerializedName("url")
-    @Expose
     private String url;
+
     @SerializedName("raceName")
-    @Expose
     private String raceName;
+
     @SerializedName("Circuit")
-    @Expose
     private Circuit circuit;
+
     @SerializedName("date")
-    @Expose
     private String date;
+
     @SerializedName("time")
-    @Expose
     private String time;
+
     @SerializedName("Results")
-    @Expose
-    private List<Result> results = null;
+    private List<Result> results;
+
+    @SerializedName("QualifyingResults")
+    private List<QualifyingResult> qualifyingResults;
 
     /**
      * No args constructor for use in serialization
@@ -51,7 +53,8 @@ public class Race {
      * @param date
      * @param url
      */
-    public Race(String season, String round, String url, String raceName, Circuit circuit, String date, String time, List<Result> results) {
+    public Race(String season, String round, String url, String raceName, Circuit circuit,
+                String date, String time, List<Result> results, List<QualifyingResult> qualifyingResults) {
         super();
         this.season = season;
         this.round = round;
@@ -61,6 +64,7 @@ public class Race {
         this.date = date;
         this.time = time;
         this.results = results;
+        this.qualifyingResults = qualifyingResults;
     }
 
     public String getSeason() {
@@ -125,5 +129,13 @@ public class Race {
 
     public void setResults(List<Result> results) {
         this.results = results;
+    }
+
+    public List<QualifyingResult> getQualifyingResults() {
+        return qualifyingResults;
+    }
+
+    public void setQualifyingResults(List<QualifyingResult> qualifyingResults) {
+        this.qualifyingResults = qualifyingResults;
     }
 }

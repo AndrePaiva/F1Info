@@ -1,18 +1,17 @@
 package com.andrepaiva.f1info.ui.adapter;
 
-import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.data.model.ApiEntities.DriverStanding;
 import com.andrepaiva.f1info.ui.listeners.OnDriverStandingItemClick;
+import com.andrepaiva.f1info.utils.FlagUtils;
 
 import java.util.List;
 
@@ -53,6 +52,7 @@ public class DriverStandingAdapter extends BaseAdapter<DriverStandingAdapter.DsV
         holder.driverStdNPoints.setText(driverStanding.getPoints() + " points");
         holder.driverStdPosition.setText(driverStanding.getPosition());
         holder.driverStdConst.setText(driverStanding.getConstructors().get(0).getName());
+        holder.driverStdFlag.setImageResource(FlagUtils.getFlagByNationality(driverStanding.getDriver().getNationality()));
     }
 
     static class DsViewHolder extends RecyclerView.ViewHolder {
@@ -62,6 +62,7 @@ public class DriverStandingAdapter extends BaseAdapter<DriverStandingAdapter.DsV
         private final TextView driverStdPosition;
         private final TextView driverStdNPoints;
         private final TextView driverStdConst;
+        private final ImageView driverStdFlag;
 
         DsViewHolder(View itemView) {
             super(itemView);
@@ -70,6 +71,7 @@ public class DriverStandingAdapter extends BaseAdapter<DriverStandingAdapter.DsV
             driverStdPosition = (TextView) driverStandingsCard.findViewById(R.id.driver_std_position);
             driverStdNPoints = (TextView) driverStandingsCard.findViewById(R.id.driver_std_points);
             driverStdConst = (TextView) driverStandingsCard.findViewById(R.id.driver_std_const);
+            driverStdFlag = (ImageView) driverStandingsCard.findViewById(R.id.driver_std_flag);
         }
     }
 }

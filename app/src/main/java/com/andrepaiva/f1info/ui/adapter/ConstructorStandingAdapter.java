@@ -5,11 +5,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.data.model.ApiEntities.ConstructorStanding;
 import com.andrepaiva.f1info.ui.listeners.OnConstructorStandingItemClick;
+import com.andrepaiva.f1info.utils.FlagUtils;
 
 import java.util.List;
 
@@ -49,7 +51,8 @@ public class ConstructorStandingAdapter extends BaseAdapter<ConstructorStandingA
         holder.constructorStdName.setText(constructorStanding.getConstructor().getName());
         holder.constructorStdPoints.setText(constructorStanding.getPoints() + " points");
         holder.constructorStdPosition.setText(constructorStanding.getPosition());
-        holder.constructorStdWins.setText(constructorStanding.getWins());
+        holder.constructorStdWins.setText("Wins: " + constructorStanding.getWins());
+        holder.constructorStdFlag.setImageResource(FlagUtils.getFlagByNationality(constructorStanding.getConstructor().getNationality()));
     }
 
     static class CsViewHolder extends RecyclerView.ViewHolder {
@@ -59,6 +62,7 @@ public class ConstructorStandingAdapter extends BaseAdapter<ConstructorStandingA
         private final TextView constructorStdPosition;
         private final TextView constructorStdPoints;
         private final TextView constructorStdWins;
+        private final ImageView constructorStdFlag;
 
         CsViewHolder(View itemView) {
             super(itemView);
@@ -67,6 +71,7 @@ public class ConstructorStandingAdapter extends BaseAdapter<ConstructorStandingA
             constructorStdPosition = (TextView) constructorStandingsCard.findViewById(R.id.constructor_std_position);
             constructorStdPoints = (TextView) constructorStandingsCard.findViewById(R.id.constructor_std_points);
             constructorStdWins = (TextView) constructorStandingsCard.findViewById(R.id.constructor_std_wins);
+            constructorStdFlag = (ImageView) constructorStandingsCard.findViewById(R.id.constructor_std_flag);
         }
     }
 }

@@ -15,6 +15,7 @@ import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.data.model.DashboardResponse;
 import com.andrepaiva.f1info.data.source.remote.DashboardAsyncTask;
 import com.andrepaiva.f1info.utils.DateUtils;
+import com.andrepaiva.f1info.utils.FlagUtils;
 import com.google.gson.Gson;
 
 public class DashboardFragment extends Fragment {
@@ -86,7 +87,7 @@ public class DashboardFragment extends Fragment {
                 ImageView countryFlag = (ImageView) getView().findViewById(R.id.next_country_flag);
                 String country = model.getNextRace().getMRData().getRaceTable().getRaces()
                         .get(0).getCircuit().getLocation().getCountry();
-                countryFlag.setImageResource(getFlagResource(country));
+                countryFlag.setImageResource(FlagUtils.getFlagResource(country));
 
                 TextView nextCircuit = (TextView) getView().findViewById(R.id.next_circuit);
                 nextCircuit.setText(model.getNextRace().getMRData().getRaceTable().getRaces()
@@ -95,6 +96,10 @@ public class DashboardFragment extends Fragment {
                 TextView nextSchedule = (TextView) getView().findViewById(R.id.next_schedule);
                 String raceDate = model.getNextRace().getMRData().getRaceTable().getRaces().get(0).getDate();
                 nextSchedule.setText(DateUtils.adjustDate(raceDate));
+
+                TextView nextTime = (TextView) getView().findViewById(R.id.next_time);
+                String raceDTime = model.getNextRace().getMRData().getRaceTable().getRaces().get(0).getTime();
+                nextTime.setText(DateUtils.adjustTimeZone(raceDTime));
 
                 /*DASHBOARD DRIVER STANDINGS*/
                 Log.d(TAG, "Teste 3: " + (gson.toJson(model.getDriverStandings())));
@@ -107,6 +112,10 @@ public class DashboardFragment extends Fragment {
                 p1StandingPoints.setText(model.getDriverStandings().getMRData().getStandingsTable()
                         .getStandingsLists().get(0).getDriverStandings().get(0).getPoints());
 
+                TextView p1StandingWins = (TextView) getView().findViewById(R.id.dashb_std_p1_wins);
+                p1StandingWins.setText("Wins: " + model.getDriverStandings().getMRData().getStandingsTable()
+                        .getStandingsLists().get(0).getDriverStandings().get(0).getWins());
+
                 /*P2*/
                 TextView p2StandingName = (TextView) getView().findViewById(R.id.dashb_std_p2_name);
                 p2StandingName.setText(model.getDriverStandings().getMRData().getStandingsTable()
@@ -115,6 +124,10 @@ public class DashboardFragment extends Fragment {
                 TextView p2StandingPoints = (TextView) getView().findViewById(R.id.dashb_std_p2_points);
                 p2StandingPoints.setText(model.getDriverStandings().getMRData().getStandingsTable()
                         .getStandingsLists().get(0).getDriverStandings().get(1).getPoints());
+
+                TextView p2StandingWins = (TextView) getView().findViewById(R.id.dashb_std_p2_wins);
+                p2StandingWins.setText("Wins: " + model.getDriverStandings().getMRData().getStandingsTable()
+                        .getStandingsLists().get(0).getDriverStandings().get(1).getWins());
 
                 /*P3*/
                 TextView p3StandingName = (TextView) getView().findViewById(R.id.dashb_std_p3_name);
@@ -125,6 +138,10 @@ public class DashboardFragment extends Fragment {
                 p3StandingPoints.setText(model.getDriverStandings().getMRData().getStandingsTable()
                         .getStandingsLists().get(0).getDriverStandings().get(2).getPoints());
 
+                TextView p3StandingWins = (TextView) getView().findViewById(R.id.dashb_std_p3_wins);
+                p3StandingWins.setText("Wins: " + model.getDriverStandings().getMRData().getStandingsTable()
+                        .getStandingsLists().get(0).getDriverStandings().get(2).getWins());
+
             }
 
             @Override
@@ -133,74 +150,6 @@ public class DashboardFragment extends Fragment {
             }
         });
         task.execute();
-    }
-
-    private int getFlagResource(String country) {
-        int id = 0;
-        switch (country){
-            case "Australia":
-                id = R.mipmap.australia;
-                break;
-            case "China":
-                id = R.mipmap.china;
-                break;
-            case "Bahrain":
-                id = R.mipmap.bahrain;
-                break;
-            case "Russia":
-                id = R.mipmap.russia;
-                break;
-            case "Spain":
-                id = R.mipmap.spain;
-                break;
-            case "Monaco":
-                id = R.mipmap.monaco;
-                break;
-            case "Canada":
-                id = R.mipmap.canada;
-                break;
-            case "Azerbaijan":
-                id = R.mipmap.azerbaijan;
-                break;
-            case "Austria":
-                id = R.mipmap.austria;
-                break;
-            case "UK":
-                id = R.mipmap.uk;
-                break;
-            case "Hungary":
-                id = R.mipmap.hungary;
-                break;
-            case "Belgium":
-                id = R.mipmap.belgium;
-                break;
-            case "Italy":
-                id = R.mipmap.italy;
-                break;
-            case "Singapore":
-                id = R.mipmap.singapore;
-                break;
-            case "Malaysia":
-                id = R.mipmap.malaysia;
-                break;
-            case "Japan":
-                id = R.mipmap.japan;
-                break;
-            case "USA":
-                id = R.mipmap.usa;
-                break;
-            case "Mexico":
-                id = R.mipmap.mexico;
-                break;
-            case "Brazil":
-                id = R.mipmap.brazil;
-                break;
-            case "UAE":
-                id = R.mipmap.uae;
-                break;
-
-        }
-        return id;
     }
 
     @Override

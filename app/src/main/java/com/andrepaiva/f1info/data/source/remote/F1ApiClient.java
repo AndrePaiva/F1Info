@@ -18,4 +18,7 @@ public interface F1ApiClient {
 
     @GET("constructorStandings.json")
     Call<ApiResponse> getConstructorStandings();
+
+    @GET("last/qualifying.json")
+    Call<ApiResponse> getQualifying();
 }
