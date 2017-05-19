@@ -50,15 +50,18 @@ public class QualifyingAdapter extends BaseAdapter<QualifyingAdapter.QViewHolder
         holder.qDriverPosition.setText(qualifyingResult.getPosition());
         holder.qDriverConst.setText(qualifyingResult.getConstructor().getName());
 
-        String q2 = qualifyingResult.getQ2();
-        String q3 = qualifyingResult.getQ3();
-        holder.qDriverQ1.setText("Q1: " + qualifyingResult.getQ1());
-        if (q2 != null){
-            holder.qDriverQ2.setText("Q2: " + q2);
+        holder.qDriverQ1.setText("Q1: " + returnTimeIfExists(qualifyingResult.getQ1()));
+        holder.qDriverQ2.setText("Q2: " + returnTimeIfExists(qualifyingResult.getQ2()));
+        holder.qDriverQ3.setText("Q3: " + returnTimeIfExists(qualifyingResult.getQ3()));
+    }
+
+    private String returnTimeIfExists(String qualifyingRound) {
+        String timeResult = "-- : -- . ---";
+        if (qualifyingRound != null){
+            timeResult = qualifyingRound;
         }
-        if (q3 != null){
-            holder.qDriverQ3.setText("Q3: " + q3);
-        }
+
+        return timeResult;
     }
 
     static class QViewHolder extends RecyclerView.ViewHolder {

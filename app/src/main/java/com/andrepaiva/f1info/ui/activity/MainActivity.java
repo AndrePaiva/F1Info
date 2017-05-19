@@ -1,7 +1,9 @@
 package com.andrepaiva.f1info.ui.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -24,11 +26,14 @@ import com.andrepaiva.f1info.ui.fragment.TeamsFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private boolean backPressed = false;
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -57,6 +62,15 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+        } else if (!backPressed){
+            backPressed = true;
+            Snackbar.make(toolbar, "Press again to exit.", Snackbar.LENGTH_SHORT).show();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    backPressed = false;
+                }
+            }, 2000);
         } else {
             super.onBackPressed();
         }
