@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.data.model.ApiEntities.ConstructorStanding;
 import com.andrepaiva.f1info.ui.listeners.OnConstructorStandingItemClick;
-import com.andrepaiva.f1info.utils.FlagUtils;
+import com.andrepaiva.f1info.utils.ImageUtils;
 
 import java.util.List;
 
@@ -52,7 +52,7 @@ public class ConstructorStandingAdapter extends BaseAdapter<ConstructorStandingA
         holder.constructorStdPoints.setText(constructorStanding.getPoints() + " points");
         holder.constructorStdPosition.setText(constructorStanding.getPosition());
         holder.constructorStdWins.setText("Wins: " + constructorStanding.getWins());
-        holder.constructorStdFlag.setImageResource(FlagUtils.getFlagByNationality(constructorStanding.getConstructor().getNationality()));
+        holder.constructorStdFlag.setImageResource(ImageUtils.getFlagByNationality(constructorStanding.getConstructor().getNationality()));
     }
 
     static class CsViewHolder extends RecyclerView.ViewHolder {

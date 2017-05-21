@@ -24,4 +24,7 @@ public interface F1ApiClient {
 
     @GET("drivers.json")
     Call<ApiResponse> getDriverList();
+
+    @GET("constructors.json")
+    Call<ApiResponse> getConstructorList();
 }

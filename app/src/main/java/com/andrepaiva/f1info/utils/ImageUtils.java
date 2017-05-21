@@ -6,7 +6,7 @@ import com.andrepaiva.f1info.R;
  * Created by andre on 17/05/2017.
  */
 
-public class FlagUtils {
+public class ImageUtils {
 
     public static int getFlagResource(String country) {
         int id = 0;
@@ -140,6 +140,43 @@ public class FlagUtils {
                 id = R.mipmap.switzerland;
                 break;
 
+        }
+        return id;
+    }
+
+    public static int getLogoByConstrutorId(String constructorName){
+        int id = 0;
+        switch (constructorName){
+            case "ferrari":
+                id = R.mipmap.ferrari_f1;
+                break;
+            case "force_india":
+                id = R.mipmap.force_india_f1;
+                break;
+            case "haas":
+                id = R.mipmap.haas_f1;
+                break;
+            case "mclaren":
+                id = R.mipmap.mclaren_f1;
+                break;
+            case "mercedes":
+                id = R.mipmap.mercedes_f1;
+                break;
+            case "red_bull":
+                id = R.mipmap.rbr_f1;
+                break;
+            case "renault":
+                id = R.mipmap.renault_f1;
+                break;
+            case "sauber":
+                id = R.mipmap.sauber_f1;
+                break;
+            case "toro_rosso":
+                id = R.mipmap.toro_roso_f1;
+                break;
+            case "williams":
+                id = R.mipmap.williams_f1;
+                break;
         }
         return id;
     }

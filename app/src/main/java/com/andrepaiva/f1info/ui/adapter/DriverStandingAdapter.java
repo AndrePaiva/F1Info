@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.data.model.ApiEntities.DriverStanding;
 import com.andrepaiva.f1info.ui.listeners.OnDriverStandingItemClick;
-import com.andrepaiva.f1info.utils.FlagUtils;
+import com.andrepaiva.f1info.utils.ImageUtils;
 
 import java.util.List;
 
@@ -52,7 +52,7 @@ public class DriverStandingAdapter extends BaseAdapter<DriverStandingAdapter.DsV
         holder.driverStdNPoints.setText(driverStanding.getPoints() + " points");
         holder.driverStdPosition.setText(driverStanding.getPosition());
         holder.driverStdConst.setText(driverStanding.getConstructors().get(0).getName());
-        holder.driverStdFlag.setImageResource(FlagUtils.getFlagByNationality(driverStanding.getDriver().getNationality()));
+        holder.driverStdFlag.setImageResource(ImageUtils.getFlagByNationality(driverStanding.getDriver().getNationality()));
     }
 
     static class DsViewHolder extends RecyclerView.ViewHolder {

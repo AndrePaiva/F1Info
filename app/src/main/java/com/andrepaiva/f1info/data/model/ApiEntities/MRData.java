@@ -1,5 +1,6 @@
 package com.andrepaiva.f1info.data.model.ApiEntities;
 
+import com.andrepaiva.f1info.data.model.ApiEntities.tables.ConstructorTable;
 import com.andrepaiva.f1info.data.model.ApiEntities.tables.DriverTable;
 import com.andrepaiva.f1info.data.model.ApiEntities.tables.RaceTable;
 import com.andrepaiva.f1info.data.model.ApiEntities.tables.StandingsTable;
@@ -34,23 +35,18 @@ public class MRData {
     @SerializedName("DriverTable")
     private DriverTable driverTable;
 
+    @SerializedName("ConstructorTable")
+    private ConstructorTable constructorTable;
+
     /**
      * No args constructor for use in serialization
      */
     public MRData() {
     }
 
-    /**
-     * @param total
-     * @param limit
-     * @param series
-     * @param xmlns
-     * @param offset
-     * @param url
-     * @param standingsTable
-     */
-    public MRData(String xmlns, String series, String url, String limit, String offset, String total, StandingsTable standingsTable) {
-        super();
+    public MRData(String xmlns, String series, String url, String limit, String offset, String total,
+                  StandingsTable standingsTable, RaceTable raceTable, DriverTable driverTable,
+                  ConstructorTable constructorTable) {
         this.xmlns = xmlns;
         this.series = series;
         this.url = url;
@@ -58,6 +54,9 @@ public class MRData {
         this.offset = offset;
         this.total = total;
         this.standingsTable = standingsTable;
+        this.raceTable = raceTable;
+        this.driverTable = driverTable;
+        this.constructorTable = constructorTable;
     }
 
     public String getXmlns() {
@@ -130,5 +129,13 @@ public class MRData {
 
     public void setDriverTable(DriverTable driverTable) {
         this.driverTable = driverTable;
+    }
+
+    public ConstructorTable getConstructorTable() {
+        return constructorTable;
+    }
+
+    public void setConstructorTable(ConstructorTable constructorTable) {
+        this.constructorTable = constructorTable;
     }
 }

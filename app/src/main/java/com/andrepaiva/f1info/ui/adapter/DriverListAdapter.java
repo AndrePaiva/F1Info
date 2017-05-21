@@ -12,7 +12,7 @@ import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.data.model.ApiEntities.Driver;
 import com.andrepaiva.f1info.ui.listeners.OnDriverListItemClick;
 import com.andrepaiva.f1info.utils.DateUtils;
-import com.andrepaiva.f1info.utils.FlagUtils;
+import com.andrepaiva.f1info.utils.ImageUtils;
 
 import java.util.List;
 
@@ -52,7 +52,7 @@ public class DriverListAdapter extends BaseAdapter<DriverListAdapter.DlViewHolde
         holder.driverName.setText(driver.getGivenName() + " " + driver.getFamilyName());
         holder.driverNumber.setText(driver.getPermanentNumber());
         holder.driverBirth.setText(DateUtils.adjustDate(driver.getDateOfBirth()));
-        holder.driverFlag.setImageResource(FlagUtils.getFlagByNationality(driver.getNationality()));
+        holder.driverFlag.setImageResource(ImageUtils.getFlagByNationality(driver.getNationality()));
     }
 
     static class DlViewHolder extends RecyclerView.ViewHolder {

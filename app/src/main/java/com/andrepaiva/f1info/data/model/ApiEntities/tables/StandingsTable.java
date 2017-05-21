@@ -9,10 +9,9 @@ import com.google.gson.annotations.SerializedName;
 public class StandingsTable {
 
     @SerializedName("season")
-    @Expose
     private String season;
+
     @SerializedName("StandingsLists")
-    @Expose
     private List<StandingsList> standingsLists;
 
     /**

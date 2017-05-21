@@ -15,7 +15,7 @@ import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.data.model.DashboardResponse;
 import com.andrepaiva.f1info.data.source.remote.DashboardAsyncTask;
 import com.andrepaiva.f1info.utils.DateUtils;
-import com.andrepaiva.f1info.utils.FlagUtils;
+import com.andrepaiva.f1info.utils.ImageUtils;
 import com.google.gson.Gson;
 
 public class DashboardFragment extends Fragment {
@@ -87,7 +87,7 @@ public class DashboardFragment extends Fragment {
                 ImageView countryFlag = (ImageView) getView().findViewById(R.id.next_country_flag);
                 String country = model.getNextRace().getMRData().getRaceTable().getRaces()
                         .get(0).getCircuit().getLocation().getCountry();
-                countryFlag.setImageResource(FlagUtils.getFlagResource(country));
+                countryFlag.setImageResource(ImageUtils.getFlagResource(country));
 
                 TextView nextCircuit = (TextView) getView().findViewById(R.id.next_circuit);
                 nextCircuit.setText(model.getNextRace().getMRData().getRaceTable().getRaces()

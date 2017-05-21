@@ -15,9 +15,9 @@
             android:icon="@drawable/ic_menu_person"
             android:title="Drivers" />
         <item
-            android:id="@+id/nav_teams"
+            android:id="@+id/nav_constructors"
             android:icon="@drawable/ic_menu_group"
-            android:title="Teams" />
+            android:title="Constructors" />
         <item
             android:id="@+id/nav_qualifying"
             android:icon="@drawable/ic_timer"
@@ -34,10 +34,6 @@
 
     <item android:title="More">
         <menu>
-            <item
-                android:id="@+id/nav_settings"
-                android:icon="@drawable/ic_build_black"
-                android:title="Settings" />
             <item
                 android:id="@+id/nav_about"
                 android:icon="@drawable/ic_menu_about_outline"

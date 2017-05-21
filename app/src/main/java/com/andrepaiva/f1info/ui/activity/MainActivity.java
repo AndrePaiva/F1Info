@@ -16,12 +16,12 @@ import android.view.MenuItem;
 
 import com.andrepaiva.f1info.R;
 import com.andrepaiva.f1info.ui.fragment.CalendarFragment;
+import com.andrepaiva.f1info.ui.fragment.ConstructorListFragment;
 import com.andrepaiva.f1info.ui.fragment.ConstructorStandingFragment;
 import com.andrepaiva.f1info.ui.fragment.DashboardFragment;
 import com.andrepaiva.f1info.ui.fragment.DriverListFragment;
 import com.andrepaiva.f1info.ui.fragment.DriverStandingFragment;
 import com.andrepaiva.f1info.ui.fragment.QualifyingFragment;
-import com.andrepaiva.f1info.ui.fragment.TeamsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -91,9 +91,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) {
+        //    return true;
+        //}
 
         return super.onOptionsItemSelected(item);
     }
@@ -122,8 +122,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_drivers:
                 fragment = new DriverListFragment();
                 break;
-            case R.id.nav_teams:
-                fragment = new TeamsFragment();
+            case R.id.nav_constructors:
+                fragment = new ConstructorListFragment();
                 break;
             case R.id.nav_qualifying:
                 fragment = new QualifyingFragment();
