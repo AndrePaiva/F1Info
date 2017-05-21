@@ -7,24 +7,27 @@ import retrofit2.http.GET;
 
 public interface F1ApiClient {
 
-    @GET("last/results.json")
+    @GET("current/last/results.json")
     Call<ApiResponse> getLastResults();
 
-    @GET("driverStandings.json")
+    @GET("current/driverStandings.json")
     Call<ApiResponse> getDriverStandings();
 
-    @GET("next.json")
+    @GET("current/next.json")
     Call<ApiResponse> getNextRace();
 
-    @GET("constructorStandings.json")
+    @GET("current/constructorStandings.json")
     Call<ApiResponse> getConstructorStandings();
 
-    @GET("last/qualifying.json")
+    @GET("current/last/qualifying.json")
     Call<ApiResponse> getQualifying();
 
-    @GET("drivers.json")
+    @GET("current/drivers.json")
     Call<ApiResponse> getDriverList();
 
-    @GET("constructors.json")
+    @GET("current/constructors.json")
     Call<ApiResponse> getConstructorList();
+
+    @GET("current.json")
+    Call<ApiResponse> getRacesSchedule();
 }

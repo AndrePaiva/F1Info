@@ -225,7 +225,8 @@
                 android:layout_below="@+id/driver_standings_title"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="@dimen/fab_margin"
-                android:text="LOADING..." />
+                android:text="1st"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashb_std_p1_points"
@@ -252,7 +253,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/dashb_std_p1_name"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="@dimen/fab_margin" />
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:text="2nd"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/dashb_std_p2_points"
@@ -279,7 +282,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/dashb_std_p2_name"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="@dimen/fab_margin" />
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:text="3rd"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashb_std_p3_points"

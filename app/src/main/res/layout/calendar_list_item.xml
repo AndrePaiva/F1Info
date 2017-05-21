@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/calendar_list_card"
+    android:layout_width="fill_parent"
+    android:layout_height="150dp"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:contentPadding="10dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/calendar_gp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/calendar_race_circuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendar_gp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/calendar_race_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendar_race_circuit"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/calendar_race_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendar_race_city"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:id="@+id/calendar_race_flag"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

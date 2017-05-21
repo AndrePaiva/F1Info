@@ -26,7 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class APIHelper {
 
-    private static final String BASE_URL = "http://ergast.com/api/f1/2017/";
+    private static final String BASE_URL = "http://ergast.com/api/f1/";
 
     private static APIHelper helper;
 
