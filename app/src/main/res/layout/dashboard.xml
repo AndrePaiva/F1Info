@@ -43,7 +43,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/last_podium"
                 android:layout_toRightOf="@id/P1_textView"
-                android:layout_marginLeft="@dimen/fab_margin" />
+                android:layout_marginLeft="@dimen/fab_margin"
+                android:text="LOADING..." />
 
             <TextView
                 android:id="@+id/P1_time"
@@ -143,7 +144,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/next_race"
                 android:layout_marginLeft="@dimen/fab_margin"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:text="LOADING..." />
 
 
             <ImageView
@@ -232,8 +234,7 @@
                 android:layout_below="@+id/driver_standings_title"
                 android:layout_toRightOf="@id/dashb_std_p1_name"
                 android:layout_marginLeft="@dimen/fab_margin"
-                android:layout_marginTop="10dp"
-                android:text="LOADING..." />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:id="@+id/dashb_std_p1_wins"
@@ -242,8 +243,7 @@
                 android:layout_below="@+id/driver_standings_title"
                 android:layout_toRightOf="@id/dashb_std_p1_points"
                 android:layout_marginLeft="@dimen/fab_margin"
-                android:layout_marginTop="10dp"
-                android:text="LOADING..." />
+                android:layout_marginTop="10dp" />
 
             <!--P2 standing-->
             <TextView
@@ -252,8 +252,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/dashb_std_p1_name"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="@dimen/fab_margin"
-                android:text="LOADING..." />
+                android:layout_marginLeft="@dimen/fab_margin" />
 
             <TextView
                 android:id="@+id/dashb_std_p2_points"
@@ -262,8 +261,7 @@
                 android:layout_below="@id/dashb_std_p1_name"
                 android:layout_toRightOf="@id/dashb_std_p2_name"
                 android:layout_marginLeft="@dimen/fab_margin"
-                android:layout_marginTop="10dp"
-                android:text="LOADING..." />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:id="@+id/dashb_std_p2_wins"
@@ -272,8 +270,7 @@
                 android:layout_below="@+id/dashb_std_p1_name"
                 android:layout_toRightOf="@id/dashb_std_p2_points"
                 android:layout_marginLeft="@dimen/fab_margin"
-                android:layout_marginTop="10dp"
-                android:text="LOADING..." />
+                android:layout_marginTop="10dp" />
 
             <!--P3 standing-->
             <TextView
@@ -282,8 +279,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/dashb_std_p2_name"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="@dimen/fab_margin"
-                android:text="LOADING..." />
+                android:layout_marginLeft="@dimen/fab_margin" />
 
             <TextView
                 android:id="@+id/dashb_std_p3_points"
@@ -292,8 +288,7 @@
                 android:layout_below="@+id/dashb_std_p2_name"
                 android:layout_toRightOf="@id/dashb_std_p3_name"
                 android:layout_marginLeft="@dimen/fab_margin"
-                android:layout_marginTop="10dp"
-                android:text="LOADING..." />
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:id="@+id/dashb_std_p3_wins"
@@ -302,8 +297,7 @@
                 android:layout_below="@+id/dashb_std_p2_name"
                 android:layout_toRightOf="@id/dashb_std_p3_points"
                 android:layout_marginLeft="@dimen/fab_margin"
-                android:layout_marginTop="10dp"
-                android:text="LOADING..." />
+                android:layout_marginTop="10dp" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
